@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "khil80-mixbalance"
+version = "0.1.0"
+description = "统计各数据源占比并与目标配比对比，标出偏离最大的部分"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "khil80" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://khil80.github.io"
+Repository = "https://github.com/khil80/mixbalance"
+Issues = "https://github.com/khil80/mixbalance/issues"
+
+[project.scripts]
+mixbalance = "mixbalance:main"
+
+[tool.setuptools]
+py-modules = ["mixbalance"]
